@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_floating"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@drawable/bg_floating"
+    android:orientation="vertical" android:padding="15dp">
+
+    <!-- Header untuk Digeser -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" 
+            android:text="DRIP WIRE" android:textColor="#FF00FF" android:textStyle="bold" android:textSize="16sp"/>
+        <TextView android:id="@+id/btnCloseMenu" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+            android:text="✖" android:textColor="#FF0000" android:textSize="20sp" android:padding="5dp"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#33FFFFFF" android:layout_marginBottom="10dp"/>
+
+    <Switch android:id="@+id/swAimbot" android:layout_width="match_parent" android:layout_height="wrap_content" 
+        android:text="Aimbot" android:textColor="#FFFFFF" android:layout_marginBottom="10dp"/>
+        
+    <Switch android:id="@+id/swWallhack" android:layout_width="match_parent" android:layout_height="wrap_content" 
+        android:text="Wallhack" android:textColor="#FFFFFF"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="Drag me to move" android:textColor="#888888" android:textSize="10sp" android:layout_marginTop="10dp"/>
+</LinearLayout>
