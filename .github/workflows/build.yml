@@ -1,4 +1,5 @@
-name: Build Android Native & Send to Telegram
+name: Build Android Native APK
+
 on:
   push:
     branches: [ "main", "master" ]
@@ -18,10 +19,8 @@ jobs:
         run: chmod +x gradlew
       - name: Build APK (Release)
         run: ./gradlew assembleRelease
-      - name: Send to Telegram
-        uses: appleboy/telegram-action@master
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
         with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "🔥 Build Panel C++ Sukses Tuan! File APK terlampir."
-          document: app/build/outputs/apk/release/app-release.apk
+          name: Panel-Cheat-APK
+          path: app/build/outputs/apk/release/app-release.apk
